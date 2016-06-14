@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+	function Play() {
+		
+		var numComp = (Math.round(Math.random()*100));
+		var count = 0;
+		
+		do {
+			var numUser = prompt('Угадайте число от 1 до 100 (0 - прервать игру)');
+			count++;
+
+			if (numUser > 0 && numUser < numComp) {
+				alert('Ваше число слишком маленькое, попробуйте еще раз!');
+			}
+			else if (numUser > numComp && numUser <= 100) {
+				alert('Ваше число слишком большое, попробуйте еще раз!');
+			}
+			else if (numUser == numComp) {
+				alert('Ура, вы угадали за ' + count + ' попыток!');
+				break;
+			}
+			else if (numUser == '0') {
+				alert('Вы прервали игру');
+				break;
+			}
+			else alert('Вы ввели что-то не то');
+		} while (true);
+
+	}
+
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html">Главная</a><span>/</span>
+		<a href="puzzle.html">Загадки</a><span>/</span>
+		<a href="ugadayka.html">Угадайка</a><span>/</span>
+		<a href="multi_ugadayka.html">Угадайка мультиплеер</a><span>/</span>
+	</div>
+<div id="content">
+	<h1>Личный сайт студента GeekBrains</h1>
+
+    <div id="center">
+
+    	<h3>Игра Угадайка</h3>
+
+	    <div id="box">
+
+	    <h5>Угадайте число от 1 до 100. Количество попыток не ограничено.</h5>
+
+
+	    <a href="multi_ugadayka.html" onclick="Play()">Начать игру</a>
+	      	
+
+	    </div>
+	
+	
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+	Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+</div>
+
+</body>
+</html>
